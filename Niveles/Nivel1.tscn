@@ -1,0 +1,157 @@
+[gd_scene load_steps=10 format=3 uid="uid://xshmp4xbayup"]
+
+[ext_resource type="PackedScene" uid="uid://dk5lfvxlygc2g" path="res://Personajes/player.tscn" id="1_585pd"]
+[ext_resource type="PackedScene" uid="uid://b0r3pi7vsbpqd" path="res://Estructuras/Puente.tscn" id="2_77p31"]
+[ext_resource type="Texture2D" uid="uid://jb1an5r2ys60" path="res://assets/Sprites/Backgrounds/Double/background_clouds.png" id="2_585pd"]
+[ext_resource type="Texture2D" uid="uid://dsupeuuwpc1fl" path="res://assets/Sprites/Backgrounds/Double/background_solid_sky.png" id="3_2up02"]
+[ext_resource type="Texture2D" uid="uid://dfs4b3wlpp8es" path="res://assets/Sprites/Backgrounds/Double/background_fade_mushrooms.png" id="3_77p31"]
+[ext_resource type="PackedScene" uid="uid://mjkaiai4wvfr" path="res://Estructuras/plata_forma_tierra.tscn" id="5_2up02"]
+[ext_resource type="Script" uid="uid://bs5768gvaa26j" path="res://Niveles/cameraPlayer.gd" id="7_j01d1"]
+[ext_resource type="PackedScene" uid="uid://cok3k5rm5gtxr" path="res://Enemigos/boss.tscn" id="7_jg5u3"]
+[ext_resource type="PackedScene" uid="uid://7mpwk83ibhdw" path="res://Enemigos/barril.tscn" id="9_1bh4s"]
+
+[node name="Nivel 1" type="Node2D"]
+position = Vector2(-252, 0)
+
+[node name="Background8" type="Node" parent="."]
+
+[node name="Background" type="Sprite2D" parent="Background8"]
+position = Vector2(-1082, 500.5)
+scale = Vector2(0.457031, 0.462891)
+texture = ExtResource("3_77p31")
+
+[node name="Background8" type="Sprite2D" parent="Background8"]
+position = Vector2(1087.5, 498)
+scale = Vector2(0.474609, 0.462891)
+texture = ExtResource("3_77p31")
+
+[node name="Background9" type="Sprite2D" parent="Background8"]
+position = Vector2(831.5, 499)
+scale = Vector2(0.525391, 0.462891)
+texture = ExtResource("3_77p31")
+
+[node name="Background10" type="Sprite2D" parent="Background8"]
+position = Vector2(563, 500)
+scale = Vector2(0.525391, 0.462891)
+texture = ExtResource("3_77p31")
+
+[node name="Background2" type="Sprite2D" parent="Background8"]
+position = Vector2(-382, 499.75)
+scale = Vector2(0.457031, 0.46582)
+texture = ExtResource("3_77p31")
+
+[node name="Background3" type="Sprite2D" parent="Background8"]
+position = Vector2(-616, 500.25)
+scale = Vector2(0.457031, 0.463867)
+texture = ExtResource("3_77p31")
+
+[node name="Background4" type="Sprite2D" parent="Background8"]
+position = Vector2(-849, 500.25)
+scale = Vector2(0.457031, 0.463867)
+texture = ExtResource("3_77p31")
+
+[node name="Background5" type="Sprite2D" parent="Background8"]
+position = Vector2(-148, 500.5)
+scale = Vector2(0.457031, 0.462891)
+texture = ExtResource("3_77p31")
+
+[node name="Background6" type="Sprite2D" parent="Background8"]
+position = Vector2(85.9999, 500)
+scale = Vector2(0.457031, 0.462891)
+texture = ExtResource("3_77p31")
+
+[node name="Background7" type="Sprite2D" parent="Background8"]
+position = Vector2(317, 500)
+scale = Vector2(0.453125, 0.462891)
+texture = ExtResource("3_77p31")
+
+[node name="BackGroundSky" type="Sprite2D" parent="Background8"]
+position = Vector2(-939, 225)
+scale = Vector2(1.01563, 0.884766)
+texture = ExtResource("2_585pd")
+
+[node name="BackGroundSky4" type="Sprite2D" parent="Background8"]
+position = Vector2(797.03, 226)
+scale = Vector2(1.60926, 0.882813)
+texture = ExtResource("2_585pd")
+
+[node name="BackGroundSky2" type="Sprite2D" parent="Background8"]
+position = Vector2(-414.939, 225.5)
+scale = Vector2(1.03149, 0.884766)
+texture = ExtResource("2_585pd")
+
+[node name="BackGroundSky3" type="Sprite2D" parent="Background8"]
+position = Vector2(117.251, 225.5)
+scale = Vector2(1.04761, 0.884766)
+texture = ExtResource("2_585pd")
+
+[node name="BackgroundSolidSky" type="Sprite2D" parent="Background8"]
+position = Vector2(4.99992, -256.5)
+scale = Vector2(4.70312, 1.00195)
+texture = ExtResource("3_2up02")
+
+[node name="Suelos" type="Node" parent="."]
+
+[node name="Puente" parent="Suelos" instance=ExtResource("2_77p31")]
+position = Vector2(-1099, 658)
+scale = Vector2(1.56804, 1.09568)
+
+[node name="Puente3" parent="Suelos" instance=ExtResource("2_77p31")]
+position = Vector2(505, 658)
+scale = Vector2(1.56804, 1.09568)
+
+[node name="Puente2" parent="Suelos" instance=ExtResource("2_77p31")]
+position = Vector2(-297, 658)
+scale = Vector2(1.56804, 1.09568)
+
+[node name="PlataForma Tierra2" parent="Suelos" instance=ExtResource("5_2up02")]
+position = Vector2(-202, 371)
+rotation = -0.371578
+scale = Vector2(1.88, 1)
+
+[node name="PlataForma Tierra4" parent="Suelos" instance=ExtResource("5_2up02")]
+position = Vector2(-130, -273)
+rotation = -0.371578
+scale = Vector2(1.88, 1)
+
+[node name="PlataForma Tierra3" parent="Suelos" instance=ExtResource("5_2up02")]
+position = Vector2(-524, -76)
+rotation = 0.255655
+scale = Vector2(1.88, 1)
+
+[node name="PlataForma Tierra5" parent="Suelos" instance=ExtResource("5_2up02")]
+position = Vector2(-425, -769)
+rotation = 0.255655
+scale = Vector2(1.88, 1)
+
+[node name="PlataForma Tierra6" parent="Suelos" instance=ExtResource("5_2up02")]
+position = Vector2(-820, -792)
+
+[node name="PlataForma Tierra" parent="Suelos" instance=ExtResource("5_2up02")]
+position = Vector2(-623, 436)
+
+[node name="Player2" type="Node" parent="."]
+
+[node name="Player" parent="Player2" instance=ExtResource("1_585pd")]
+position = Vector2(-1091, 501)
+
+[node name="Enemigos" type="Node" parent="."]
+
+[node name="Boss" parent="Enemigos" instance=ExtResource("7_jg5u3")]
+position = Vector2(-679, -920)
+
+[node name="Barril" parent="Enemigos" instance=ExtResource("9_1bh4s")]
+position = Vector2(-443, -865)
+
+[node name="Barril2" parent="Enemigos" instance=ExtResource("9_1bh4s")]
+position = Vector2(-303, -159)
+
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("object_to_follow")]
+position = Vector2(-358, 325)
+limit_left = 0
+limit_top = -1800
+limit_right = 700
+limit_bottom = 700
+position_smoothing_enabled = true
+script = ExtResource("7_j01d1")
+object_to_follow = NodePath("../Player2/Player")

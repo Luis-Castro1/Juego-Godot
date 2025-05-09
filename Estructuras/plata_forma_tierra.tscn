@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://mjkaiai4wvfr"]
+
+[ext_resource type="Texture2D" uid="uid://glfvr0i5kh2w" path="res://assets/Sprites/Tiles/Double/terrain_grass_cloud_left.png" id="1_fbng6"]
+[ext_resource type="Texture2D" uid="uid://dd1n8u3rcvwu0" path="res://assets/Sprites/Tiles/Double/terrain_grass_cloud_right.png" id="2_wb2w1"]
+[ext_resource type="Texture2D" uid="uid://cajpobhb1ypkg" path="res://assets/Sprites/Tiles/Double/terrain_grass_cloud_middle.png" id="3_1wyio"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fbng6"]
+size = Vector2(368, 42)
+
+[node name="PlataForma Tierra" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="TierraLeft" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("1_fbng6")
+
+[node name="TierraRight" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(255, 0)
+texture = ExtResource("2_wb2w1")
+
+[node name="TierraCenter" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(128, 0)
+texture = ExtResource("3_1wyio")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(127, -35)
+shape = SubResource("RectangleShape2D_fbng6")
+one_way_collision = true

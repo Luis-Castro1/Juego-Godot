@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0r3pi7vsbpqd"]
+
+[ext_resource type="Texture2D" uid="uid://bwp4vdv6ok0xm" path="res://assets/Sprites/Tiles/Double/terrain_grass_block_top.png" id="1_g6vs5"]
+[ext_resource type="Texture2D" uid="uid://d4o7phsb1h7c" path="res://assets/Sprites/Tiles/Double/terrain_grass_block_bottom.png" id="5_dqqem"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wmoqy"]
+size = Vector2(512, 239)
+
+[node name="Puente" type="StaticBody2D"]
+
+[node name="Suelo center" type="Sprite2D" parent="."]
+position = Vector2(0, 127)
+texture = ExtResource("5_dqqem")
+
+[node name="Suelo center2" type="Sprite2D" parent="."]
+position = Vector2(256, 127)
+texture = ExtResource("5_dqqem")
+
+[node name="Suelo center3" type="Sprite2D" parent="."]
+position = Vector2(128, 127)
+texture = ExtResource("5_dqqem")
+
+[node name="Suelo center4" type="Sprite2D" parent="."]
+position = Vector2(384, 127)
+texture = ExtResource("5_dqqem")
+
+[node name="Suelos" type="Sprite2D" parent="."]
+texture = ExtResource("1_g6vs5")
+
+[node name="Suelos2" type="Sprite2D" parent="."]
+position = Vector2(128, 0)
+texture = ExtResource("1_g6vs5")
+
+[node name="Suelos3" type="Sprite2D" parent="."]
+position = Vector2(256, 0)
+texture = ExtResource("1_g6vs5")
+
+[node name="Suelos4" type="Sprite2D" parent="."]
+position = Vector2(384, 0)
+texture = ExtResource("1_g6vs5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(192, 63.5)
+shape = SubResource("RectangleShape2D_wmoqy")

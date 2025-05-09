@@ -1,0 +1,256 @@
+[gd_scene load_steps=13 format=3 uid="uid://cok3k5rm5gtxr"]
+
+[ext_resource type="Texture2D" uid="uid://cbw0syhsdboih" path="res://assets/Sprites/Enemies/Double/barnacle_attack_a.png" id="1_ecyau"]
+[ext_resource type="Texture2D" uid="uid://cjja6m6t2eqr" path="res://assets/Sprites/Tiles/Double/BrazoBoss.png" id="2_ib4jg"]
+[ext_resource type="Texture2D" uid="uid://c1yj81p2b5uep" path="res://assets/Sprites/Enemies/Default/slime_normal_walk_a.png" id="3_174xw"]
+[ext_resource type="Texture2D" uid="uid://bxpnfm4ncuuby" path="res://assets/Sprites/Enemies/Default/slime_normal_rest.png" id="4_hay2d"]
+[ext_resource type="Texture2D" uid="uid://c25nbyh5uf8ja" path="res://assets/Sprites/Enemies/Double/barnacle_attack_b.png" id="5_8rhxq"]
+[ext_resource type="Texture2D" uid="uid://bs2ewu06cr73w" path="res://assets/Sprites/Enemies/Double/barnacle_attack_rest.png" id="6_uyn2l"]
+[ext_resource type="Texture2D" uid="uid://cvwx6gq8tjvkw" path="res://assets/Sprites/Enemies/Default/slime_normal_walk_b.png" id="7_6qmih"]
+[ext_resource type="PackedScene" uid="uid://fvjmhmgouitm" path="res://Enemigos/EnemigoDormido.tscn" id="8_ib4jg"]
+
+[sub_resource type="Animation" id="Animation_qafth"]
+resource_name = "reposo"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BarnacleAttackA/BrazoBoss:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-17, 63), Vector2(-15, 61)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BarnacleAttackA/BrazoBoss/SlimeNormalWalkA:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.332158),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BarnacleAttackA:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0333333, 0.433333, 0.966667, 1.26667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_ecyau"), ExtResource("5_8rhxq"), ExtResource("6_uyn2l"), ExtResource("5_8rhxq")]
+}
+
+[sub_resource type="Animation" id="Animation_t56wy"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BarnacleAttackA/BrazoBoss:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-17, 63)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BarnacleAttackA/BrazoBoss/SlimeNormalWalkA:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BarnacleAttackA:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_ecyau")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BarnacleAttackA:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BarnacleAttackA/BrazoBoss:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-6.31372]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("BarnacleAttackA/BrazoBoss:show_behind_parent")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("BarnacleAttackA/BrazoBoss/SlimeNormalWalkA:texture")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_174xw")]
+}
+
+[sub_resource type="Animation" id="Animation_uxw5j"]
+resource_name = "Lanzar"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BarnacleAttackA:scale")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.933333),
+"transitions": PackedFloat32Array(0.999998, 1),
+"update": 1,
+"values": [Vector2(-0.999999, 1), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BarnacleAttackA/BrazoBoss:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.71, 1.22),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-7, 65), Vector2(41, 50), Vector2(2, -52), Vector2(46, 42)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BarnacleAttackA/BrazoBoss:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.36, 0.71),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-5.63316, -6.31372, -7.84358]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BarnacleAttackA/BrazoBoss:show_behind_parent")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.71, 0.92),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BarnacleAttackA/BrazoBoss/SlimeNormalWalkA:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.37),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("BarnacleAttackA/BrazoBoss/SlimeNormalWalkA:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.37, 0.72, 1.24),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_174xw"), ExtResource("4_hay2d"), ExtResource("3_174xw"), ExtResource("7_6qmih")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w7orw"]
+_data = {
+&"Lanzar": SubResource("Animation_uxw5j"),
+&"RESET": SubResource("Animation_t56wy"),
+&"reposo": SubResource("Animation_qafth")
+}
+
+[node name="Boss" type="Node2D"]
+
+[node name="BarnacleAttackA" type="Sprite2D" parent="."]
+texture = ExtResource("1_ecyau")
+
+[node name="BrazoBoss" type="Sprite2D" parent="BarnacleAttackA"]
+show_behind_parent = true
+position = Vector2(-17, 63)
+rotation = -6.31372
+scale = Vector2(1.01145, 0.289063)
+texture = ExtResource("2_ib4jg")
+
+[node name="SlimeNormalWalkA" type="Sprite2D" parent="BarnacleAttackA/BrazoBoss"]
+position = Vector2(52.5042, -49.8914)
+rotation = 0.609803
+scale = Vector2(1.13437, 3.40256)
+skew = -0.557526
+texture = ExtResource("3_174xw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_w7orw")
+}
+autoplay = "reposo"
+
+[node name="Enemigo dormido" parent="." instance=ExtResource("8_ib4jg")]
+position = Vector2(-116, 36)
+
+[node name="Enemigo dormido3" parent="." instance=ExtResource("8_ib4jg")]
+position = Vector2(-144, 1)
+
+[node name="Enemigo dormido2" parent="." instance=ExtResource("8_ib4jg")]
+position = Vector2(-170, 36)

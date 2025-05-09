@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://7mpwk83ibhdw"]
+
+[ext_resource type="Script" uid="uid://eixdyrd7onmu" path="res://Enemigos/barril.gd" id="1_mjvi1"]
+[ext_resource type="Texture2D" uid="uid://c1yj81p2b5uep" path="res://assets/Sprites/Enemies/Default/slime_normal_walk_a.png" id="2_mjvi1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g20eb"]
+radius = 27.0185
+
+[node name="Barril" type="RigidBody2D"]
+script = ExtResource("1_mjvi1")
+
+[node name="EffectBlastLarge" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_mjvi1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 21)
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_g20eb")
+one_way_collision_margin = 0.0
